@@ -1,47 +1,485 @@
----
-# Page meta info, like heading, footer text and nav links
 pageInfo:
-  title: Dashy
-  description: Welcome to your new dashboard!
+  title: 点点之家
+  description: Dian Dian Zhi Jia
   navLinks:
-  - title: GitHub
-    path: https://github.com/Lissy93/dashy
-  - title: Documentation
-    path: https://dashy.to/docs
-
-# Optional app settings and configuration
+    - title: Home
+      path: https://diandianzhijia.com
+    - title: Monarch
+      path: https://app.monarchmoney.com/dashboard
+    - title: Github
+      path: https://github.com/Mingyuan-Zhang233?tab=repositories
+    
 appConfig:
-  theme: colorful
-
-# Main content - An array of sections, each containing an array of items
+  theme: material-original
+  layout: auto
+  iconSize: medium
+  language: en
+  startingView: default
+  defaultOpeningMethod: newtab
+  statusCheck: false
+  statusCheckInterval: 0
+  faviconApi: allesedv
+  routingMode: history
+  enableMultiTasking: true
+  widgetsAlwaysUseProxy: false
+  webSearch:
+    disableWebSearch: true
+    searchEngine: google
+    openingMethod: newtab
+    searchBangs: {}
+  enableFontAwesome: true
+  enableMaterialDesignIcons: false
+  hideComponents:
+    hideHeading: false
+    hideNav: false
+    hideSearch: false
+    hideSettings: true
+    hideFooter: true
+  auth:
+    enableGuestAccess: false
+    users:
+      - user: zhang
+        hash: 592d3d245e5ff0e463467f10d3718a57f6825ceef6d83d08d174cb3439eaf221
+        type: admin
+      - user: lu
+        hash: fa8611f25e32e0b8692a6ad41a60c8bf8d0731b0bd57a510f786efb314915093
+    enableKeycloak: false
+  showSplashScreen: false
+  preventWriteToDisk: false
+  preventLocalSave: false
+  disableConfiguration: false
+  disableConfigurationForNonAdmin: true
+  allowConfigEdit: true
+  enableServiceWorker: false
+  disableContextMenu: false
+  disableUpdateChecks: false
+  disableSmartSort: false
+  enableErrorReporting: false
+  customColors:
+    material-original:
+      primary: '#29b6f6'
+      background: '#f1f1f1'
+      background-darker: '#01579b'
+      info: '#04e4f4'
+      success: '#20e253'
+      warning: '#f6f000'
+      error: '#fca016'
+      danger: '#f80363'
+      neutral: '#272f4d'
+      white: '#fff'
+      black: '#555'
+      item-group-background: '#bfbfbf'
+      medium-grey: '#5e6474'
+      item-background: '#fff'
+      item-background-hover: '#fff'
+      transparent-70: rgba(0,0,0,0.701961)
+      transparent-50: rgba(0,0,0,0.501961)
+      transparent-30: rgba(0,0,0,0.301961)
+      transparent-white-70: hsla(0,0%,100%,0.701961)
+      transparent-white-50: hsla(0,0%,100%,0.501961)
+      transparent-white-30: hsla(0,0%,100%,0.301961)
+      heading-text-color: '#fff'
+      nav-link-text-color: '#29b6f6'
+      nav-link-background-color: rgba(96,125,139,0.2)
+      nav-link-text-color-hover: '#29b6f6'
+      nav-link-background-color-hover: rgba(96,125,139,0.2)
+      nav-link-border-color: transparent
+      nav-link-border-color-hover: '#29b6f6'
+      nav-link-shadow: '1px 1px 2px #232323'
+      nav-link-shadow-hover: '1px 1px 2px #232323'
+      item-text-color: '#555'
+      item-text-color-hover: '#555'
+      item-group-outer-background: none
+      item-group-heading-text-color: '#555'
+      item-group-heading-text-color-hover: '#01579b'
+      settings-text-color: '#01579b'
+      settings-background: '#29b6f6'
+      config-settings-color: '#fff'
+      config-settings-background: '#01579b'
+      config-code-color: '#555'
+      config-code-background: '#fff'
+      code-editor-color: '#555'
+      code-editor-background: '#fff'
+      widget-text-color: '#555'
+      widget-background-color: '#01579b'
+      widget-accent-color: '#f1f1f1'
+      widget-base-background: transparent
+      interactive-editor-color: '#fff'
+      interactive-editor-background: '#01579b'
+      interactive-editor-background-darker: '#29b6f6'
+      cloud-backup-color: '#fff'
+      cloud-backup-background: '#01579b'
+      search-container-background: '#29b6f6'
+      search-field-background: '#f1f1f1'
+      search-label-color: '#01579b'
+      footer-text-color: '#5e6474'
+      footer-text-color-link: '#29b6f6'
+      footer-background: '#01579b'
+      context-menu-background: '#fff'
+      context-menu-color: '#29b6f6'
+      context-menu-secondary-color: '#fff'
+      side-bar-background: '#01579b'
+      side-bar-background-lighter: '#f1f1f1'
+      side-bar-color: '#29b6f6'
+      side-bar-item-background: '#01579b'
+      side-bar-item-color: '#29b6f6'
+      workspace-web-content-background: '#f1f1f1'
+      minimal-view-background-color: '#f1f1f1'
+      minimal-view-title-color: '#29b6f6'
+      minimal-view-settings-color: '#29b6f6'
+      minimal-view-section-heading-color: '#29b6f6'
+      minimal-view-section-heading-background: '#fff'
+      minimal-view-search-background: '#fff'
+      minimal-view-search-color: '#01579b'
+      minimal-view-group-color: '#29b6f6'
+      minimal-view-group-background: '#e3e3e3'
+      login-form-color: '#29b6f6'
+      login-form-background: '#fff'
+      login-form-background-secondary: '#01579b'
+      about-page-color: '#01579b'
+      about-page-background: '#f1f1f1'
+      about-page-accent: '#555'
+      scroll-bar-color: '#29b6f6'
+      scroll-bar-background: '#01579b'
+      highlight-color: '#f1f1f1'
+      highlight-background: '#29b6f6'
+      progress-bar: '#29b6f6'
+      loading-screen-color: '#29b6f6'
+      loading-screen-background: '#f1f1f1'
+      status-check-tooltip-background: '#f2f2f2'
+      status-check-tooltip-color: '#01579b'
+      welcome-popup-background: '#01579b'
+      welcome-popup-text-color: '#fff'
+      toast-background: '#29b6f6'
+      toast-color: '#f1f1f1'
+      description-tooltip-background: '#f2f2f2'
+      description-tooltip-color: '#01579b'
+      outline-color: none
+      curve-factor: 2px
+      curve-factor-navbar: '0'
+      curve-factor-small: 2px
+      dimming-factor: '0.7'
+      scroll-bar-width: 8px
+      header-height: 6.3rem
+      footer-height: 128px
+      item-group-padding: 5px 0 0
+      item-shadow: 0 1px 3px rgba(0,0,0,0.121569),0 1px 2px rgba(0,0,0,0.239216)
+      item-hover-shadow: 0 1px 4px rgba(0,0,0,0.160784),0 2px 4px rgba(0,0,0,0.164706)
+      item-icon-transform: drop-shadow(1px 2px 1px rgba(0,0,0,0.301961)) saturate(0.65)
+      item-icon-transform-hover: drop-shadow(1px 3px 2px rgba(0,0,0,0.301961)) saturate(2)
+      item-group-shadow: none
+      context-menu-shadow: 0 1px 3px rgba(0,0,0,0.121569),0 1px 2px rgba(0,0,0,0.239216)
+      section-max-height: 3000px
+      settings-container-shadow: 0 1px 3px rgba(0,0,0,0.368627),0 1px 2px rgba(0,0,0,0.521569)
+      side-bar-width: 3.5rem
+      tooltip-arrow-size: 6px
+      tooltip-width: 250px
+      tooltip-padding: 0.2rem
+      font-body: '"Roboto",serif'
+      font-headings: '"Inconsolata","Georgia",sans-serif'
+      font-monospace: '"PTMono","Courier New",monospace'
 sections:
-- name: Getting Started
-  icon: fas fa-rocket
-  items:
-  - title: Dashy Live
-    description: Development a project management links for Dashy
-    icon: https://i.ibb.co/qWWpD0v/astro-dab-128.png
-    url: https://live.dashy.to/
-    target: newtab
-  - title: GitHub
-    description: Source Code, Issues and Pull Requests
-    url: https://github.com/lissy93/dashy
-    icon: favicon
-  - title: Docs
-    description: Configuring & Usage Documentation
-    provider: Dashy.to
-    icon: far fa-book
-    url: https://dashy.to/docs
-  - title: Showcase
-    description: See how others are using Dashy
-    url: https://github.com/Lissy93/dashy/blob/master/docs/showcase.md
-    icon: far fa-grin-hearts
-  - title: Config Guide
-    description: See full list of configuration options
-    url: https://github.com/Lissy93/dashy/blob/master/docs/configuring.md
-    icon: fas fa-wrench
-  - title: Support
-    description: Get help with Dashy, raise a bug, or get in contact
-    url: https://github.com/Lissy93/dashy/blob/master/.github/SUPPORT.md
-    icon: far fa-hands-helping
-  
+  - name: Home Services
+    icon: house-signal-solid.svg
+    items:
+      - title: NextCloud
+        description: NextCloud Web Interface
+        icon: nextcloud.png
+        url: https://cloud.diandianzhijia.com
+        target: sametab
+        id: 0_1261_nextcloud
+      - title: Movies & Shows
+        description: Jellyfin Web Interface
+        icon: Jellyfin.png
+        url: https://media.diandianzhijia.com/jellyfin
+        target: sametab
+        id: 1_1261_moviesshows
+      - title: Music
+        description: Navidrome Web Interface
+        icon: navidrome.png
+        url: https://music.diandianzhijia.com
+        target: sametab
+        id: 2_1261_music
+      - title: Video Download
+        description: Download video or audio from webpage
+        icon: youtube.svg
+        url: https://app.diandianzhijia.com/ytdl
+        target: sametab
+        id: 3_1261_videodownload
+      - title: Quick Notes
+        description: Edit Quick Notes
+        icon: notes.png
+        url: https://app.diandianzhijia.com/notes/view
+        target: newtab
+        id: 3_1292_editnotes        
+      - title: Smart Home
+        description: Home Assistant
+        icon: home-assistant.png
+        url: https://home-assistant.diandianzhijia.com
+        target: sametab
+        id: 5_1261_ha
+      - title: Devices Status
+        description: Monitor Devices Uptime
+        icon: uptime-kuma.png
+        url: https://uptime.diandianzhijia.com/status/device
+        target: sametab
+        id: 7_1261_devicesstatus
+      - title: File Box
+        description: Download or upload file
+        icon: box-archive-solid.svg
+        url: https://filebox.diandianzhijia.com
+        target: sametab
+        id: 8_1261_filebox
+      - title: Organized View
+        description: Organizr
+        icon: sidebar.png
+        url: https://tabs.diandianzhijia.com
+        target: sametab
+        id: 9_1261_tabs
+      - title: Metrics
+        description: Metrics Grafana Dashboards
+        icon: grafana.png
+        url: https://grafana.diandianzhijia.com
+        target: sametab
+        id: 10_1261_grafana
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+  - name: Quick Buttons
+    icon: buttons.png
+    items:
+      - title: Start HTPC
+        description: Remotely Wake HTPC
+        icon: tv-solid.svg
+        url: https://app.diandianzhijia.com/wake_on_LAN/HTPC
+        target: sametab
+        id: 0_1292_starthtpc
+      - title: Start Desktop
+        description: Remotely Wake ZhangPC
+        icon: desktop-solid.svg
+        url: https://app.diandianzhijia.com/wake_on_LAN/ZhangPC
+        target: sametab
+        id: 1_1292_startdesktop
+      - title: Manage Tasks
+        description: View Scheduled Backend Tasks
+        icon: list-check-solid.svg
+        url: https://app.diandianzhijia.com/tasks
+        target: sametab
+        id: 2_1292_viewtasks
+      - title: Edit Notes
+        description: Edit Quick Notes
+        icon: notes.png
+        url: https://app.diandianzhijia.com/notes/edit
+        target: newtab
+        id: 3_1292_editnotes
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+  - name: Logs
+    icon: file-lines-regular.svg
+    items:
+      - title: Diandianzhijia
+        description: Diandianzhijia Backend Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/diandianzhijia.log
+        target: newtab
+        id: 0_405_diandianzhijia
+      - title: Wake on LAN
+        description: Diandianzhijia WOL Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/wol.log
+        target: newtab
+        id: 1_405_wakeonlan
+      - title: YTDL
+        description: Diandianzhijia YTDL Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/ytdl.log
+        target: newtab
+        id: 2_405_ytdl
+      - title: Server Access
+        description: Diandianzhijia Access Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/flask.log
+        target: newtab
+        id: 3_405_serveraccess
+      - title: Tasks Log
+        description: Diandianzhijia Tasks Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/tasks.log
+        target: newtab
+        id: 4_405_taskslog
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+  - name: Service Management
+    icon: gears-solid.svg
+    items:
+      - title: OpenVPN
+        description: OpenVPN Admin Portal
+        icon: openvpn.png
+        url: https://vpn.diandianzhijia.com
+        target: newtab
+        id: 0_1774_openvpn
+      - title: TrueNAS
+        description: TrueNAS Admin Portal
+        url: https://truenas.diandianzhijia.com
+        icon: truenas-scale.png
+        target: newtab
+        id: 1_1774_truenas
+      - title: Proxmox
+        description: Proxmox Management page
+        icon: proxmox.png
+        url: https://proxmox.diandianzhijia.com
+        target: newtab
+        id: 2_1774_proxmox
+      - title: Primary Pi-Hole
+        description: Pi-Hole Admin Portal
+        icon: pihole.png
+        url: http://pihole1.diandianzhijia.com/admin
+        target: newtab
+        id: 3_1774_primarypihole
+      - title: Secondary Pi-Hole
+        description: Pi-Hole Admin Portal
+        icon: pihole.png
+        url: http://pihole2.diandianzhijia.com/admin
+        target: newtab
+        id: 4_1774_secondarypihole
+      - title: Router
+        description: Asus Router Admin Portal
+        icon: router.png
+        url: https://router.diandianzhijia.com
+        target: newtab
+        id: 5_1774_router
+      - title: Network Bridge
+        description: Asus Network Bridge Admin Portal
+        icon: router.png
+        url: https://router-bridge.diandianzhijia.com
+        target: newtab
+        id: 5_1774_router
+      - title: Internal Router
+        description: Internal OPNSense Admin Portal
+        icon: opnsense.png
+        url: https://router-internal.diandianzhijia.com/
+        target: newtab
+        id: 19_1774_internalrouter
+      - title: DevLAN Router
+        description: DevLAN OPNSense Admin Portal
+        icon: opnsense.png
+        url: https://router-devlan.diandianzhijia.com/
+        target: newtab
+        id: 22_1774_devlanrouter
+      - title: Portainer
+        description: Portainer Admin Portal for Media Server
+        icon: Portainer.png
+        url: https://portainer.diandianzhijia.com
+        target: newtab
+        id: 6_1774_portainer
+      - title: qBittorrent
+        description: qBittorrent Admin Portal
+        icon: qBittorrent.png
+        url: https://media.diandianzhijia.com/qbittorrent
+        target: newtab
+        id: 7_1774_qbittorrent
+      - title: Media Portainer
+        description: Portainer Admin Portal for Media Server
+        icon: Portainer.png
+        url: https://media.diandianzhijia.com/portainer
+        target: newtab
+        id: 8_1774_mediaportainer
+      - title: Radarr
+        description: Radarr Admin Portal
+        icon: Radarr.png
+        url: https://media.diandianzhijia.com/radarr
+        target: newtab
+        id: 9_1774_radarr
+      - title: Sonarr
+        description: Sonarr Admin Portal
+        icon: Sonarr.png
+        url: https://media.diandianzhijia.com/sonarr
+        target: newtab
+        id: 10_1774_sonarr
+      - title: Prowlarr
+        description: Prowlarr Admin Portal
+        icon: Prowlarr.png
+        url: https://media.diandianzhijia.com/prowlarr
+        target: newtab
+        id: 11_1774_prowlarr
+      - title: Bazarr
+        description: Bazar Admin Portal
+        icon: Bazarr.png
+        url: https://media.diandianzhijia.com/bazarr
+        target: newtab
+        id: 12_1774_bazarr
+      - title: Jellyfin
+        description: Jellyfin Admin Portal
+        icon: Jellyfin.png
+        url: https://media.diandianzhijia.com/jellyfin
+        target: newtab
+        id: 13_1774_jellyfin
+      - title: Readarr
+        description: Readarr Admin Portal
+        icon: Readarr.png
+        url: https://media.diandianzhijia.com/readarr
+        target: newtab
+        id: 14_1774_readarr
+      - title: Lidarr
+        description: Lidarr Admin Portal
+        icon: Lidarr.png
+        url: https://media.diandianzhijia.com/lidarr
+        target: newtab
+        id: 15_1774_lidarr
+      - title: Navidrome
+        description: Navidrome Admin Portal
+        icon: navidrome.png
+        url: https://music.diandianzhijia.com
+        target: newtab
+        id: 16_1774_navidrome
+      - title: Uptime Kuma
+        description: Uptime Kuma Admin Portal
+        icon: uptime-kuma.png
+        url: https://uptime.diandianzhijia.com
+        target: newtab
+        id: 17_1774_uptimekuma
+      - title: Service Uptime
+        description: Monitor Service Uptime
+        icon: uptime-kuma.png
+        url: https://uptime.diandianzhijia.com/status/home
+        target: newtab
+        id: 20_1774_serviceuptime
+      - title: File Box
+        description: FileCodeBox Admin Portal
+        icon: box-archive-solid.svg
+        url: https://filebox.diandianzhijia.com/zhang
+        target: newtab
+        id: 18_1774_filebox
+      - title: Grafana
+        description: Metrics Grafana Dashboards
+        icon: grafana.png
+        url: https://grafana.diandianzhijia.com
+        target: sametab
+        id: 19_1774_grafana
+      - title: Home Assistant
+        description: Home Assistant
+        icon: home-assistant.png
+        url: https://home-assistant.diandianzhijia.com/config/dashboard
+        target: newtab
+        id: 21_1774_ha
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 2
+      collapsed: false
+      hideForGuests: true
+
+pages:
+  - name: Status
+    path: status-page.yml
