@@ -1,0 +1,100 @@
+pageInfo:
+  title: 点点之家
+  description: Status and Statistics
+  navLinks:
+    - title: Home
+      path: https://diandianzhijia.com
+    - title: Dashboard
+      path: https://dashboard.diandianzhijia.com
+
+sections:
+  - name: Logs and Status
+    icon: file-lines-regular.svg
+    items:
+      - title: Diandianzhijia
+        description: Diandianzhijia Backend Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/diandianzhijia.log
+        target: newtab
+      - title: Wake on LAN
+        description: Diandianzhijia WOL Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/wol.log
+        target: newtab
+      - title: YTDL
+        description: Diandianzhijia YTDL Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/ytdl.log
+        target: newtab
+      - title: Server Access
+        description: Diandianzhijia Access Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/flask.log
+        target: newtab
+      - title: Tasks Log
+        description: Diandianzhijia Tasks Logs
+        icon: file-lines-regular.svg
+        url: https://app.diandianzhijia.com/view_log/tasks.log
+        target: newtab
+      - title: Service Uptime
+        description: Monitor Service Uptime
+        icon: uptime-kuma.png
+        url: https://uptime.diandianzhijia.com/status/home
+        target: sametab
+      - title: Devices Status
+        description: Monitor Devices Uptime
+        icon: uptime-kuma.png
+        url: https://uptime.diandianzhijia.com/status/device
+        target: sametab
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+
+  - name: Primary Pi-Hole
+    icon: gauge-solid.svg
+    widgets:
+      - type: pi-hole-stats
+        updateInterval: 20
+        useProxy: true
+        options:
+          hostname: http://192.168.1.2
+          apiKey: 8ad714da65338ade03dc88950c91cfb6d89b3d01cb4f7357926f1604ae875e79
+      - type: pi-hole-traffic
+        updateInterval: 20
+        useProxy: true
+        options:
+          hostname: http://192.168.1.2
+          apiKey: 8ad714da65338ade03dc88950c91cfb6d89b3d01cb4f7357926f1604ae875e79
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+
+  - name: Secondary Pi-Hole
+    icon: gauge-solid.svg
+    widgets:
+      - type: pi-hole-stats
+        updateInterval: 20
+        useProxy: true
+        options:
+          hostname: http://192.168.1.26
+          apiKey: 8ad714da65338ade03dc88950c91cfb6d89b3d01cb4f7357926f1604ae875e79
+      - type: pi-hole-traffic
+        updateInterval: 20
+        useProxy: true
+        options:
+          hostname: http://192.168.1.26
+          apiKey: 8ad714da65338ade03dc88950c91cfb6d89b3d01cb4f7357926f1604ae875e79
+    displayData:
+      sortBy: default
+      rows: 1
+      cols: 1
+      collapsed: false
+      hideForGuests: true
+
+
