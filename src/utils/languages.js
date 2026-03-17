@@ -14,6 +14,7 @@ import hu from '@/assets/locales/hu.json';
 import it from '@/assets/locales/it.json';
 import ja from '@/assets/locales/ja.json';
 import ko from '@/assets/locales/ko.json';
+import ky from '@/assets/locales/ky.json';
 import nb from '@/assets/locales/nb.json';
 import nl from '@/assets/locales/nl.json';
 import pl from '@/assets/locales/pl.json';
@@ -94,7 +95,7 @@ export const languages = [
     flag: '🇲🇫',
   },
   { // Hindi
-    name: 'नहीं',
+    name: 'हिन्दी',
     code: 'hi',
     locale: hi,
     flag: '🇮🇳',
@@ -122,6 +123,12 @@ export const languages = [
     code: 'ko',
     locale: ko,
     flag: '🇰🇷',
+  },
+  { // Kyrgyz
+    name: 'Кыргызча',
+    code: 'ky',
+    locale: ky,
+    flag: '🇰🇬',
   },
   { // Norwegian
     name: 'Norsk',
